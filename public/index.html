@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="restaurantsApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurants</title>
+    <!--Bootstrap-->
+    <link href="bower_components\bootstrap\dist\css\bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1><a href="/#!/">RESTAURANTS</a></h1>
+        <div class="container" ng-controller="SearchController">
+            <form ng-submit="getQuery()">
+                <div id="search" class="input-group">
+                    <input ng-model="query" type="text" class="form-control" placeholder="enter a city" list="cities">
+                    <span ng-click="getQuery()" class="btn btn-info input-group-addon" id="basic-addon2">SEARCH NEIGHBOURHOOD</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+    <!--Angular -->
+    <script src="bower_components\angular\angular.js"></script>
+    <!-- angular Route-->
+    <script type="text/javascript" src="bower_components\angular-route\angular-route.js"></script>
+    <!--JQuery -->
+    <script src="bower_components\jquery\dist\jquery.js"></script>
+    <!-- BoostrapJS -->
+    <script src="bower_components\bootstrap\js\bootstrap.js"></script>
+    <!-- Main module -->
+    <script src="js/app.js"></script>
+    <!-- Services -->
+    <script src="js/services/services.js"></script>
+    <!--routes -->
+    <!--List Restaurants -->
+    <script src="js/routes/listRestaurants/controller.js"></script>
+    <script src="js/routes/listRestaurants/index.js"></script>
+    <!-- List By Borough -->
+    <script src="js/routes/byBorough/controller.js"></script>
+    <script src="js/routes/byBorough/index.js"></script>
+</body>
+
+</html>
