@@ -16,7 +16,6 @@ angular.module('restaurantsApp')
   }
 
   function pageDown () {
-    console.log('enter pageDown')
     if ($scope.page > 1) {
       $scope.page--
       byBorough()
@@ -24,8 +23,6 @@ angular.module('restaurantsApp')
   }
 
   function pageUp () {
-      // if ($scope.page < $scope.numPages) {
-    console.log('enter pageUP')
     $scope.page++
     byBorough()
       // }
